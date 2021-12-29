@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Dev\\TacTix\\TacTixBackend\\TacTixBackend.csproj": {}
+    "D:\\Dev\\TacTix\\TacTixBackend\\src\\TacTix.WebApi\\TacTix.WebApi.csproj": {}
   },
   "projects": {
-    "D:\\Dev\\TacTix\\TacTixBackend\\TacTixBackend.csproj": {
+    "D:\\Dev\\TacTix\\TacTixBackend\\src\\TacTix.WebApi\\TacTix.WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dev\\TacTix\\TacTixBackend\\TacTixBackend.csproj",
-        "projectName": "TacTixBackend",
-        "projectPath": "D:\\Dev\\TacTix\\TacTixBackend\\TacTixBackend.csproj",
+        "projectUniqueName": "D:\\Dev\\TacTix\\TacTixBackend\\src\\TacTix.WebApi\\TacTix.WebApi.csproj",
+        "projectName": "TacTix.WebApi",
+        "projectPath": "D:\\Dev\\TacTix\\TacTixBackend\\src\\TacTix.WebApi\\TacTix.WebApi.csproj",
         "packagesPath": "C:\\Users\\Booblik\\.nuget\\packages\\",
-        "outputPath": "D:\\Dev\\TacTix\\TacTixBackend\\obj\\",
+        "outputPath": "D:\\Dev\\TacTix\\TacTixBackend\\src\\TacTix.WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Booblik\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -37,12 +37,6 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "dependencies": {
-            "Swashbuckle.AspNetCore": {
-              "target": "Package",
-              "version": "[5.6.3, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -54,9 +48,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
