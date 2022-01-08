@@ -3,18 +3,18 @@
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 #WORKDIR /source
 WORKDIR /source
-RUN pwd
+# RUN pwd
 
 # copy csproj and restore as distinct layers
 #COPY aspnetapp/*.csproj ./aspnetapp/
 #RUN dotnet restore
-COPY src/TacTix.WebApi/*.csproj ./TacTix.WebApi
-RUN pwd; ls
-RUN dotnet restore ./TacTix.WebApi
+# COPY src/TacTix.WebApi/*.csproj ./
+# RUN pwd; ls
+RUN dotnet restore ./src/TacTix.WebApi
 
-COPY src/TacTix.WebApi/. ./TacTix.WebApi
-WORKDIR /source/TacTix.WebApi
-RUN pwd; ls
+# COPY src/TacTix.WebApi/. ./TacTix.WebApi
+# WORKDIR /source/TacTix.WebApi
+# RUN pwd; ls
 RUN dotnet publish -c release -o /app --no-restore
 
 # final stage/image
