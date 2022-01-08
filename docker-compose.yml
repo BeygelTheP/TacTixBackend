@@ -2,17 +2,15 @@ services:
     dotnet-watch-docker-example:
         container_name: tac-tix-api
         image: mcr.microsoft.com/dotnet/sdk:5.0
+        environment:
+            ASPNETCORE_URLS: http://*:5000;https://*:5001
         ports:
             - 5000:5000
             - 5001:5001
         volumes:
             - ./src/TacTix.WebApi:/app
         working_dir: /app
-        command:
-            - sh -c "dotnet dev-certs https --clean"
-            - sh -c "dotnet dev-certs https"
-            - sh -c "dotnet dev-certs https --trust"
-            - sh -c "dotnet watch run"
+        command: bash -c "dotnet dev-certs https && dotnet watch run"
         depends_on:
             - db
     db:
