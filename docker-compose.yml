@@ -1,0 +1,16 @@
+services:
+    # web:
+    #     build: .
+    #     ports:
+    #         - "8000:80"
+    #     depends_on:
+    #         - db
+    db:
+        image: "mcr.microsoft.com/mssql/server:2019-latest"
+        ports:
+            - "1433:1433"
+        volumes:
+            - sql1data:/var/opt/mssql/data
+        environment:
+            SA_PASSWORD: "U^,zIg#VIO*82kT:"
+            ACCEPT_EULA: "Y"

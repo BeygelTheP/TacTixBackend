@@ -8,10 +8,11 @@ RUN pwd
 # copy csproj and restore as distinct layers
 #COPY aspnetapp/*.csproj ./aspnetapp/
 #RUN dotnet restore
-COPY src/TacTix.WebApi/. ./TacTix.WebApi
+COPY src/TacTix.WebApi/*.csproj ./TacTix.WebApi
 RUN pwd; ls
 RUN dotnet restore ./TacTix.WebApi
 
+COPY src/TacTix.WebApi/. ./TacTix.WebApi
 WORKDIR /source/TacTix.WebApi
 RUN pwd; ls
 RUN dotnet publish -c release -o /app --no-restore
