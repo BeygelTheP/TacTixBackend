@@ -1,10 +1,13 @@
 services:
-    api:
-        build: .
+    dotnet-watch-docker-example:
+        container_name: tac-tix-api
+        image: mcr.microsoft.com/dotnet/core/sdk:3.0
         ports:
-            - "5000:5000"
+            - 5000:5000
         volumes:
-            - ./src/TacTix.WebApi:/source
+            - ./src/TacTix.WebApi:/app
+        working_dir: /app
+        command: dotnet watch run
         depends_on:
             - db
     db:
